@@ -1,8 +1,8 @@
 
 class Analyser:
-    def __init__(self, content):
+    def __init__(self, content, website):
         self.__content = content
-        self.__website = "undefined"
+        self.__website = website
 
     def find_video_src(self):
         pass

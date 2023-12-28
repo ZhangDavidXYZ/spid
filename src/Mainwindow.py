@@ -1,2 +1,6 @@
+import requests
+
 if __name__ == '__main__':
-    pass
+    response = requests.get("https://www.baidu.com/")
+    response.encoding = "utf-8"
+    print(response.text)
