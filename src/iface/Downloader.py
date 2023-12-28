@@ -1,15 +1,15 @@
-import threading
-
-import Writer
+from model.Writer import Writer
+from model.Reader import Reader
 
 
 class Downloader:
-    writer = None
-    reader = None
+    __writer = None
+    __reader = None
+    __analyser = None
 
-    def __init__(self, file_name, path):
-        self.writer = Writer.Writer("test", "/")
-        # self.writer = Writer.Writer(file_name, path)
+    def __init__(self, read_file_name, read_file_path, write_file_name, write_file_path):
+        self.__writer = Writer(write_file_name, write_file_path)
+        self.__reader = Reader(read_file_name, read_file_path)
 
     def download(self):
         pass
